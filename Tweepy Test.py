@@ -10,7 +10,7 @@ pip install tweepy
 # In[33]:
 
 
-#Twitter Test eigen timeline
+####Twitter Test eigen timeline ####
 
 import tweepy
 import csv 
@@ -27,7 +27,7 @@ for tweet in public_tweets:
 # In[82]:
 
 
-# Collecting tweets met hashtag coronavaccine"
+#### Collecting tweets met hashtag coronavaccine" ####
 search_words = "vaccin"
 search_noretweets = search_words + " -filter:retweets "
 date_since = "2021-01-01"
@@ -45,7 +45,7 @@ tweets =tweepy.Cursor(api.search,
 # In[ ]:
 
 
-# Collecting tweets met hashtag coronavaccine - test met csv bestand
+##### Collecting tweets met hashtag coronavaccine - test met csv bestand ####
 search_words = "vaccin"
 search_noretweets = search_words + " -filter:retweets "
 date_since = "2021-01-01"
@@ -73,7 +73,7 @@ with open("Tweepy_Output.csv", mode = "w", encoding="utf-8") as tweepy_file:
 # In[92]:
 
 
-#Test met meerdere entities
+####Test met meerdere entities ####
 
 # Collecting tweets met hashtag coronavaccine"
 search_words = "vaccin"
