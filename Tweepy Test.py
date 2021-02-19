@@ -91,5 +91,6 @@ for tweet in tweets:
     print("Liked:", tweet.favorited)
     print("Retweet count:", tweet.retweet_count)
     print("Twitter user ID:", tweet.id)
+    print("Hoi dit is een test")
     
 
