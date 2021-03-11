@@ -6,6 +6,7 @@ Username
 	- Is it possible to delete all but one tweet without jeopardizing the data analysis?
 - Text:
 	- Remove 'Replying to' and user handles from tweet text
+	- Decoding non-ASCII encodings (e.g. @thierrybaudet!âƒ or #wappies â€™Ik blijf)
 - Reply.count:
 	- Remove NA and replace thousands (e.g. 1.9k) by 1900
 - Retweets:
