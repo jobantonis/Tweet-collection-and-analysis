@@ -12,7 +12,8 @@ Username
 - Reply.count:
 	- Remove NA and replace thousands (e.g. 1.9k) by 1900
 - Retweets:
-	- Remove NA and replace thousands (e.g. 1.9k) by 1900
+	- Remove NA and replace thousands (e.g. 1.9k) by 1900 
 - Like.count
-	- Remove NA and replace thousands (e.g. 1.9k) by 1900
+	- Remove NA and replace thousands (e.g. 1.9k) by 1900		
+- While scraping, we'd ideally like to randomly assign a number to each username and show that number in the database.  
 	
