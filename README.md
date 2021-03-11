@@ -25,3 +25,14 @@ The research of Ramírez-Sáyago (2020) inidicated keywords to use in finding re
 
 ## About
 This study was conducted as part of the course, Online Data Collections (oDCM) from Tilburg University. The cleaned data by the scraper build will then be used for the course, Data Prep and Workflow Management from Tilburg University. All team members of team 1 were involved in the process of building, developing, optimizing, cleaning and eventually reporting the scraper(data). Team members; Anouk van Gestel, Job Antonis, Marc Lefebvre, Raul Kleinherenbrink and Lieke Adams.
+
+## Dependencies for scraper
+Python
+Py packages: import "getpass", "time", "selenium.webdriver.common.keys", "selenium.webdriver.chrome",  
+
+# Dependencies for cleaning data & sentiment analysis
+R
+R packages: install.packages("?")
+Gnu make?
+Makefiles
+Detailed installation instructions from: tilburgsciencehub.com and our lecturer Hannes Datta
