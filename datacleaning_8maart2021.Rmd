@@ -1,0 +1,26 @@
+---
+title: "datacleaning_8maart2021"
+author: "Marc Lefebvre"
+date: "11/03/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Data cleaning test
+
+##Data extracted from Twitter for #coronavaccin between the 6th of March and the 10th of March 2021. These are dates surrounding the accompanying press conference by the Dutch government on the 8th of March 2021.
+
+```{}
+
+
+```
+
+
+
+
+
+
+
