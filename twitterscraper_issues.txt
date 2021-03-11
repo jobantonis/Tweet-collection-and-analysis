@@ -1,3 +1,4 @@
 Issues with scraper:
 - Older scrapes visibly miss tweets -> is this because of the quantity of the tweets? Scrape of 6th of March 2020 had 23 tweets in total, however our scraper only picked up on 14 tweets.
 	- Does this mean that we're also missing out on tweets in other recent, higher quantity scrapes?
+- Tweet text is appended by hyperlink text. How do we only scrape the tweet text and not the text on the hyperlink preview?
