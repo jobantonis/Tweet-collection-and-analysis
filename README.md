@@ -21,7 +21,7 @@ Explain to potential users how to run/replicate your workflow. Touch upon, if ne
 
 ## More resources
 
-Point interested users to any related literature and/or documentation.
+The research of Ramírez-Sáyago (2020) inidicated keywords to use in finding relevant tweets about the COVID-19 virus. However in this study the COVID-vaccine will be the main focus, hence indicating that the keywords are the keywords of Ramírez-Sáyago (2020) with "vaccin(e)" behind it. However the keywords "coronavirus" and "corona" were not used in this research. The research of Kruspe et al., (2020) add these keywords to their sentiment analysis, therefore these keywords were added combined with the keyword "vaccine".
 
 ## About
 This study was conducted as part of the course, Online Data Collections (oDCM) from Tilburg University. The cleaned data by the scraper build will then be used for the course, Data Prep and Workflow Management from Tilburg University. All team members of team 1 were involved in the process of building, developing, optimizing, cleaning and eventually reporting the scraper(data). Team members; Anouk van Gestel, Job Antonis, Marc Lefebvre, Raul Kleinherenbrink and Lieke Adams.
