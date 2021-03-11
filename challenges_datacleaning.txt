@@ -1,0 +1,15 @@
+Challenges with data cleaning:
+Username
+- Duplicate users: 
+	- How many tweets from duplicate user?
+	- Is there a combination of positive and negative tweets?
+	- Is it possible to delete all but one tweet without jeopardizing the data analysis?
+- Text:
+	- Remove 'Replying to' and user handles from tweet text
+- Reply.count:
+	- Remove NA and replace thousands (e.g. 1.9k) by 1900
+- Retweets:
+	- Remove NA and replace thousands (e.g. 1.9k) by 1900
+- Like.count
+	- Remove NA and replace thousands (e.g. 1.9k) by 1900
+	
