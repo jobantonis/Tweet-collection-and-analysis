@@ -3,7 +3,7 @@
 __What effect did the Dutch government speeches have on the attitude of their citizens towards the corona-vaccin?__
 
 ## Motivation
-Currently the COVID-19 pandemic has a large effect on society. The social network Twitter is a way which users can use to voice their opnions via the use of tweets. To detect the sentiment towards the corona-vaccin in the Netherlands this scraper is going to scrape Twitter upon different keywords, within the timeframes around the time the Dutch government speeched to the Dutch citizens about COVID-19 regulations. The hypothesis of our research is that their might be an influence on the opion of citizens about the vaccin leading up to, during and after the speeches. This will be conducted by a sentiment analysis by using the data from the scraper build.
+Currently, the COVID-19 pandemic has a large effect on society. The social network Twitter is a way which users can voice their opnions via the use of tweets. To detect the sentiment towards the COVID-19-vaccine in the Netherlands, this scraper will scrape Twitter based on several different keywords, around the time where the Dutch government holds press conferences to Dutch citizens about COVID-19 regulations. The hypothesis of our research is that there might be an influence on the opinion of citizens about the vaccine leading up to, during and after the speeches. This will be anlysed via a sentiment analysis by using the data from the scraper build.
 
 ## Method and results
 
