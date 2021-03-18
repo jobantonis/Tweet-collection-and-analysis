@@ -15,7 +15,7 @@ client = gspread.authorize(credentials)
 
 spreadsheet = client.open('CSV-to-Google-Sheet')
 
-with open('DataCollection_Twitter - DataCollection_Twitter.csv', 'r', encoding='latin-1') as file_obj:
+with open('DataCollection_Twitter.csv', 'r', encoding='latin-1') as file_obj:
     content = file_obj.read()
     client.import_csv(spreadsheet.id, data=content)
 
