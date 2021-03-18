@@ -1,0 +1,115 @@
+---
+title: "DataCleaning_test_2"
+author: "Marc Lefebvre & Raul Kleinherenbrink"
+date: "18/03/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data cleaning script
+
+### import packages
+
+```{}
+library(tm)
+library(tidyverse)
+library(stringr)
+tweets <- read.csv("coronavaccin_tweets_8maart2020.csv")
+
+```
+
+### Remove NA
+
+```{}
+tweets <- tweets %>% 
+  mutate(Reply.count = replace(Reply.count, is.na(Reply.count), "0")) %>% 
+  mutate(Retweets = replace(Retweets, is.na(Retweets), "0")) %>% 
+  mutate(Like.count = replace(Like.count, is.na(Like.count), "0"))
+
+```
+
+### Clean Comment column
+
+```{}
+tweetscom <- str_remove_all(tweets$Comment, "Replying to ")
+tweets["Comment_clean"] <- tweetscom
+tweetsand <- str_remove_all(tweets$Comment_clean, " and ")
+tweets["Comment_clean"] <- tweetsand
+tweetsother <- str_remove_all(tweets$Comment_clean, " other ")
+tweets["Comment_clean"] <- tweetsother
+tweetsothers <- str_remove_all(tweets$Comment_clean, " others")
+tweets["Comment_clean"] <- tweetsothers
+tweets$Comment_clean <- gsub(" ?@\\w+ ?", "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('[0-9]+', "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub("[\r\n]" , "", tweets$Comment_clean)
+
+```
+
+### Clean Responding column
+
+```{}
+tweets$Responding <- gsub("Quote.*" , "", tweets$Responding)
+
+```
+
+### Remove Comment column and add Comment_clean to correct position
+
+```{}
+tweets$Comment <- NULL
+tweets <- tweets[, c(1, 2, 3, 8, 4, 5, 6, 7)]
+
+```
+
+### Add Responding to empty spaces Comment_clean and remove Responding column
+
+```{}
+tweets$Comment_clean <- ifelse(tweets$Comment_clean == "", tweets$Responding, tweets$Comment_clean)
+tweets$Responding <- NULL
+```
+
+### Remove white spaces
+
+```{}
+tweets$Comment_clean <- trimws(tweets$Comment_clean)
+
+```
+
+### In timestamp: Replace T with , and Z with ""
+
+```{}
+tweets$Timestamp <- gsub("T" , ", ", tweets$Timestamp)
+tweets$Timestamp <- gsub("Z" , "", tweets$Timestamp)
+tweets$Timestamp <- gsub(".000" , "", tweets$Timestamp)
+
+```
+
+### Encoding usernames to numerical values
+
+```{}
+tweets$UserName <- match(tweets$UserName, unique(tweets$UserName))
+tweets$Handle <- NULL
+
+```
+
+### Removing non-textual ASCII characters
+
+```{}
+tweets$Comment_clean <- gsub('€' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('«' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('©' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('œ' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('™️' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('â' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('ƒ' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('Ã' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('¯' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('$' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('˜' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('¥' , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub('¡' , "", tweets$Comment_clean)
+```
+
