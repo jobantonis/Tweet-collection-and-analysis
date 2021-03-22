@@ -47,7 +47,7 @@ This study was conducted as part of the course, Online Data Collections (oDCM) f
 
 Python
 Py packages: import "getpass", "time", "selenium.webdriver.common.keys", "selenium.webdriver.chrome",
-https://chromedriver.chromium.org/downloads
+https://chromedriver.chromium.org/downloads <- download the Selenium Chrome webdriver using this link. Make sure to select the correct version for Chrome.
 
 # Dependencies for cleaning data & sentiment analysis
 
