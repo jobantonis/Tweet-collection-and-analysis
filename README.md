@@ -13,11 +13,11 @@ First, introduce and motivate your chosen method, and explain how it contributes
 
 In order to answer the main research motive, Twitter data has to be scraped. This was done through the use of a webscraper, built up in Python. After the collection process, a data cleaning script was written using R, which is used to clean the Twitter data. This data is cleaned in several ways, including the filtering of unreadable symbols and creating anonymity by replacing Twitter usernames by numbers. Afterwards, the cleaned data was exported to a CSV file, which was then used to conduct a sentiment analysis in R. This sentiment analysis is important for answering the research question, since it allows for an understanding of what the overall attitude towards the COVID-19 vaccine on Dutch Twitter is.
 
-Second, summarize your results concisely. Make use of subheaders where appropriate.
+**Second, summarize your results concisely. Make use of subheaders where appropriate.**
 
 ## Repository overview
 
-When entering the main branch of the Github repository, several files and folders can immediately be seen. There are two folders, named "data" & "src". Next to this, a .gitignore file, a README.md file (which contains all text seen above and below) and a "client_secrets.json" file can be seen. Entering the "src" folder, one is greeted with two subfolders named "collect" and "preparation". The "collect" folder contains two files named "Collection.py" and "Upload.py". "Collection.py" contains the webscraper used to scrape the Twitter data and writes the collected data to the "data" folder. "Upload.py" contains the code which allows the scraped data to be uploaded to a drive in a CSV file. The "preparation" folder contains 2 files: "download.py" and "clean.R". The file "download.py" contains a code which retrieves data from the drive, and saves it into the "data" folder. The "clean.R" code contains the cleaning script, which cleans up the data retrieved by "download.py". *ADD SENTIMENT ANALYSIS THING HERE*
+When entering the main branch of the Github repository, several files and folders can immediately be seen. There are two folders, named "data" & "src". Next to this, a .gitignore file, a README.md file (which contains all text seen above and below) and a "client_secrets.json" file can be seen. Entering the "src" folder, one is greeted with two subfolders named "collect" and "preparation". The "collect" folder contains two files named "Collection.py" and "Upload.py". "Collection.py" contains the webscraper used to scrape the Twitter data and writes the collected data to the "data" folder. "Upload.py" contains the code which allows the scraped data to be uploaded to a drive in a CSV file. The "preparation" folder contains 2 files: "download.py" and "clean.R". The file "download.py" contains a code which retrieves data from the drive, and saves it into the "data" folder. The "clean.R" code contains the cleaning script, which cleans up the data retrieved by "download.py". **ADD SENTIMENT ANALYSIS THING HERE**
 
 ## Running instructions
 
@@ -39,7 +39,7 @@ Py packages: import "getpass", "time", "selenium.webdriver.common.keys", "seleni
 # Dependencies for cleaning data & sentiment analysis
 
 R
-R packages: install.packages("?")
-Gnu make?
-Makefiles
-Detailed installation instructions from: tilburgsciencehub.com and our lecturer Hannes Datta
+R packages: install.packages("stringr"), ("tidyverse"), ("data.table")
+**Gnu make?
+Makefiles**
+
