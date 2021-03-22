@@ -11,19 +11,25 @@ This research sets out to analyse the sentiment of the Dutch public towards a co
 
 Our method consists of 5 steps to analyze sentiment data.
 
-### Step 1 - Data collection
+#### Step 1 - Data collection
 
 Step 1 consists of the data collection. In this research data will be collected using a bespoke scraper, which will be utilised on different timeframes and targeted on tweets with covid related keywords. The data will consequently be saved as a csv file.
 
-### Step 2 - Data Preparation
+#### Step 2 - Data Preparation
 
-Step 2 consists of data cleaning and preparation. In order to correctly 
+Step 2 consists of data preperation and cleaning. A script has been provided that cleans the csv files extracted from the scraper. After the cleaner has been utilised, data will be ready for analysis.
 
-### Step 3 - Sentiment detection
+#### Step 3 - Sentiment detection
 
-### Step 4 - Sentiment classification
+During step 3, each tweet's text field is examined for subjectivity. Tweet text with subjective expressions are retained and objective expressions are discarded.
 
-### Step 5 - Presentation of output
+#### Step 4 - Sentiment classification
+
+During step 4 each subjective string detected is classified into groups: positive, negative.
+
+#### Step 5 - Presentation of output
+
+After sentiment classification, the goal of step 5 is to structure the data in a visual and informative manner. The text results are displayed in a different array of graphs.
 
 **Second, summarize your results concisely. Make use of subheaders where appropriate.**
 
