@@ -9,9 +9,17 @@ This research sets out to analyse the sentiment of the Dutch public towards a co
 
 ## Method and results
 
-First, introduce and motivate your chosen method, and explain how it contributes to solving the research question/business problem.
+Our method consists of 5 steps to analyze sentiment data.
 
-In order to answer the main research motive, Twitter data has to be scraped. This was done through the use of a webscraper, built up in Python. After the collection process, a data cleaning script was written using R, which is used to clean the Twitter data. This data is cleaned in several ways, including the filtering of unreadable symbols and creating anonymity by replacing Twitter usernames by numbers. Afterwards, the cleaned data was exported to a CSV file, which was then used to conduct a sentiment analysis in R. This sentiment analysis is important for answering the research question, since it allows for an understanding of what the overall attitude towards the COVID-19 vaccine on Dutch Twitter is.
+### Step 1 - Data collection
+
+### Step 2 - Data Preparation
+
+### Step 3 - Sentiment detection
+
+### Step 4 - Sentiment classification
+
+### Step 5 - Presentation of output
 
 **Second, summarize your results concisely. Make use of subheaders where appropriate.**
 
@@ -34,7 +42,8 @@ This study was conducted as part of the course, Online Data Collections (oDCM) f
 ## Dependencies for scraper
 
 Python
-Py packages: import "getpass", "time", "selenium.webdriver.common.keys", "selenium.webdriver.chrome",  
+Py packages: import "getpass", "time", "selenium.webdriver.common.keys", "selenium.webdriver.chrome",
+https://chromedriver.chromium.org/downloads
 
 # Dependencies for cleaning data & sentiment analysis
 
