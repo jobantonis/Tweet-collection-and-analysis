@@ -13,7 +13,11 @@ Our method consists of 5 steps to analyze sentiment data.
 
 ### Step 1 - Data collection
 
+Step 1 consists of the data collection. In this research data will be collected using a bespoke scraper, which will be utilised on different timeframes and targeted on tweets with covid related keywords. The data will consequently be saved as a csv file.
+
 ### Step 2 - Data Preparation
+
+Step 2 consists of data cleaning and preparation. In order to correctly 
 
 ### Step 3 - Sentiment detection
 
@@ -29,7 +33,7 @@ When entering the main branch of the Github repository, several files and folder
 
 ## Running instructions
 
-Explain to potential users how to run/replicate your workflow. Touch upon, if necessary, the required input data, which (secret) credentials are required (and how to obtain them), which software tools are needed to run the workflow (including links to the installation instructions), and how to run the workflow. Make use of subheaders where appropriate.
+To start off, the webscraper (collect.py) will need to be run. For this to work, the chromedriver for Selenium will need to be installed (link to download can be found under the header "Dependencies for scraper". Other than that, the webscraper should be able to run if the chromedriver is installed correctly. Then, upload.py will need to be run. The code will need to be edited in order to upload the data to one's personal drive. Then, using the download.py file, the data can be extracted from the drive (do not forget to edit the code so that it extracts the data from the personal drive given in the upload.py file). Then, one can run clean.R in order to run the cleaning script, which will automatically work (for info on what packages to install, please see the header "Dependencies for cleaning data & sentiment analyis" below). A clean dataset is then downloaded, and any analysis can be done on it. If sentiment analysis is also done, make sure to import the correct file when starting the analysis.
 
 ## More resources
 
@@ -49,6 +53,7 @@ https://chromedriver.chromium.org/downloads
 
 R
 R packages: install.packages("stringr"), ("tidyverse"), ("data.table")
+
 **Gnu make?
 Makefiles**
 
