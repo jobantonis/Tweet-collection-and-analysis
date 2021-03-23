@@ -14,7 +14,7 @@ output: html_document
 library(tidyverse)
 library(stringr)
 library(data.table)
-#tweets=data.frame(fread('https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=1fPcAKAf5qEycTAOjiqvDuKLo7kRGuk2NJaFkpRRbw2w&hl&exportFormat=csv'))
+#tweets=data.frame(fread('https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=1fPcAKAf5qEycTAOjiqvDuKLo7kRGuk2NJaFkpRRbw2w&hl&exportFormat=csv', encoding = "UTF-8"))
 
 tweets <- read.csv("CSV-to-Google-Sheet - CSV-to-Google-Sheetaaa.csv")
 ```
