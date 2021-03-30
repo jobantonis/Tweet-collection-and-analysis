@@ -27,15 +27,11 @@ tweets$Comment_clean <- gsub("[\r\n]" , "", tweets$Comment_clean)
 
 tweets$Responding <- gsub("Quote.*" , "", tweets$Responding)
 
-
 tweets$Comment <- NULL
 tweets <- tweets[, c(1, 2, 3, 8, 4, 5, 6, 7)]
 
-
 tweets$Comment_clean <- ifelse(tweets$Comment_clean == "", tweets$Responding, tweets$Comment_clean)
 tweets$Responding <- NULL
-
-
 
 tweets$Comment_clean <- trimws(tweets$Comment_clean)
 
@@ -43,12 +39,10 @@ tweets$Timestamp <- gsub("T" , ", ", tweets$Timestamp)
 tweets$Timestamp <- gsub("Z" , "", tweets$Timestamp)
 tweets$Timestamp <- gsub(".000" , "", tweets$Timestamp)
 
-
 tweets$UserName <- match(tweets$UserName, unique(tweets$UserName))
 tweets$Handle <- NULL
 
 tweets$Comment_clean <- str_remove_all(tweets$Comment_clean, "[€«©œâƒÃ¯$˜¥¡™]")
-
 
 tweets <- tweets[!duplicated(tweets$Comment_clean), ]
 row.names(tweets) <- NULL
