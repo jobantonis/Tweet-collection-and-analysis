@@ -1,8 +1,12 @@
 
 library(tidyverse)
 library(stringr)
-library(gsheet)
+library(data.table)
 tweets <- read.csv("data/dataset1/tweet_data.csv")
+
+tweets$Reply.count <- as.numeric(sub("k", "e3", tweets$Reply.count, fixed = TRUE))
+tweets$Retweets <- as.numeric(sub("k", "e3", tweets$Retweets, fixed = TRUE))
+tweets$Like.count <- as.numeric(sub("k", "e3", tweets$Like.count, fixed = TRUE))
 
 tweets <- tweets %>% 
   mutate(Reply_count = replace(Reply_count, is.na(Reply_count), "0")) %>% 
@@ -35,36 +39,18 @@ tweets$Responding <- NULL
 
 tweets$Comment_clean <- trimws(tweets$Comment_clean)
 
-
-
 tweets$Timestamp <- gsub("T" , ", ", tweets$Timestamp)
 tweets$Timestamp <- gsub("Z" , "", tweets$Timestamp)
 tweets$Timestamp <- gsub(".000" , "", tweets$Timestamp)
 
 
-
-
 tweets$UserName <- match(tweets$UserName, unique(tweets$UserName))
 tweets$Handle <- NULL
 
+tweets$Comment_clean <- str_remove_all(tweets$Comment_clean, "[â‚¬Â«Â©Å“ÂÃ¢Æ’ÃƒÂ¯$ËœÂ¥Â¡â„¢]")
 
 
+tweets <- tweets[!duplicated(tweets$Comment_clean), ]
 
 
-tweets$Comment_clean <- gsub('???' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('«' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('©' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('o' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('T???' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('â' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('f' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('Ã' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('¯' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('$' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('~' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('¥' , "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub('¡' , "", tweets$Comment_clean)
-
-
-save(tweets,file="./gen/data-preparation/output/tweet_data_cleaned.RData")
+save(tweets,file="./gen/data-preparation/output/tweet_data_cleaned.R")
