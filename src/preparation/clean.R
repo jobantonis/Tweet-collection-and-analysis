@@ -47,7 +47,7 @@ tweets$Timestamp <- gsub(".000" , "", tweets$Timestamp)
 tweets$UserName <- match(tweets$UserName, unique(tweets$UserName))
 tweets$Handle <- NULL
 
-tweets$Comment_clean <- str_remove_all(tweets$Comment_clean, "[???<Co��fA??$~Y!T]")
+tweets$Comment_clean <- str_remove_all(tweets$Comment_clean, "[€«©œâƒÃ¯$˜¥¡™]")
 
 
 tweets <- tweets[!duplicated(tweets$Comment_clean), ]
