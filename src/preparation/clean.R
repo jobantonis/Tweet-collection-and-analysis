@@ -23,7 +23,7 @@ tweetsothers <- str_remove_all(tweets$Comment_clean, " others")
 tweets["Comment_clean"] <- tweetsothers
 tweets$Comment_clean <- gsub(" ?@\\w+ ?", "", tweets$Comment_clean)
 tweets$Comment_clean <- gsub('[0-9]+', "", tweets$Comment_clean)
-tweets$Comment_clean <- gsub("[\r\n]" , "", tweets$Comment_clean)
+tweets$Comment_clean <- gsub("[\r\n]", "", tweets$Comment_clean)
 
 tweets$Responding <- gsub("Quote.*" , "", tweets$Responding)
 
