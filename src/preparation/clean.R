@@ -43,7 +43,7 @@ tweets$Timestamp <- gsub("\\,.*$", "", tweets$Timestamp)
 tweets$UserName <- match(tweets$UserName, unique(tweets$UserName))
 tweets$Handle <- NULL
 
-tweets$Comment_clean <- str_remove_all(tweets$Comment_clean, "[???��???o��fï$~��T???]")
+tweets$Comment_clean <- str_remove_all(tweets$Comment_clean, "[€«©œâƒÃ¯$˜¥¡™]")
 
 tweets <- tweets[!duplicated(tweets$Comment_clean), ]
 row.names(tweets) <- NULL
