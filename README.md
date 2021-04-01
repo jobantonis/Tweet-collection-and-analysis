@@ -19,11 +19,11 @@ Step 1 consists of the data collection. In this research data will be collected 
 
 Step 2 consists of data preperation and cleaning. A script has been provided that cleans the csv files extracted from the scraper. After the cleaner has been utilised, data will be ready for analysis.
 
-#### Step 3 - Sentiment detection
+#### Step 3 - Sentiment detection <- looked at polarity, text below needs to be changed
 
 During step 3, each tweet's text field is examined for subjectivity. Tweet text with subjective expressions are retained and objective expressions are discarded.
 
-#### Step 4 - Sentiment classification
+#### Step 4 - Sentiment classification <- same issue as above: polarity already shows positive/negative
 
 During step 4 each subjective string detected is classified into groups: positive, negative.
 
