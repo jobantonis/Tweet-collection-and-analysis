@@ -50,7 +50,7 @@ The outcome of the sentiment analysis is devided into three different plots that
 ![Image of Keywords in Tweets](https://github.com/jobantonis/Tweet-collection-and-analysis/blob/main/images/Image_Number_Tweets_Keywords.PNG)
 
 We discover the sentiment of the tweets correlating negatively with an press conference and observe a change in sentiment toward the coronavaccin from either negative or positive to neutral longer into the pandemic. The results shown large portion of the records were objective which was approximately between 60 and 45 percent. From this study we can say that people's reactions vary day to day from posting their feelings on social media specifically Twitter. Unfortunately, the pandemic is still far from over and the dynamics of this analysis may very well change in the future.
-![Image of Sentimentanalysis](https://github.com/jobantonis/Tweet-collection-and-analysis/blob/main/images/Image_Vaccine_Sentiment_Status.PNG | width=100)
+![Image of Sentimentanalysis](https://github.com/jobantonis/Tweet-collection-and-analysis/blob/main/images/Image_Vaccine_Sentiment_Status.PNG)
 
 ## Repository overview
 
@@ -84,7 +84,7 @@ Overview of the of the directory structure and files:
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── preparation                                  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── clean.R                                                      
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── analysis                                  
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── sentiment_analysis.py
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── sentiment_analysis.py                               
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .DS_Store                                    
 └── images                                                                                               
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Image_Number_Tweets_Keywords.PNG                                                 
