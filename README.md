@@ -56,20 +56,25 @@ We discover the sentiment of the tweets correlating negatively with an press con
 
 Overview of the of the directory structure and files:
 
-├── README.md                                         
-├── makefile                                         
-├── client_secrets.json                              
-├── .gitignore                                       
+├── README.md
+├── App
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── output
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─── RUN RMD FILE TO RENDER APP.txt
+│ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─── Polarity_over_time_app.Rmd   
+├── makefile                                                                      
+├──.gitignore                                       
 ├── data                                             
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── dataset1                                     
-│ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─── DataCollection_Twitter                  
+│ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─── DataCollection_Twitter.csv                  
 ├── gen                                              
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── analysis                                     
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ Sentiment.py                
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ output                                        
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── sentiment_analysis_visualizations.ipynb
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─── data-preparation                            
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ output                                   
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── .gitattributes                      
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── tweet_data_cleaned                   
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .gitattributes
+├── prerequistites                                                                                                        
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─── custom_urls.py
 ├── src                                              
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── collect                                      
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── client_secret_needed                    
@@ -77,9 +82,9 @@ Overview of the of the directory structure and files:
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Upload.py                             
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .DS_Store                                  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── preparation                                  
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── clean.R                                   
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── clean                                  
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── download.R                              
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── clean.R                                                      
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── analysis                                  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── sentiment_analysis.py
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .DS_Store                                    
 └── images                                                                                               
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Image_Number_Tweets_Keywords.PNG                                                 
@@ -94,45 +99,33 @@ README.md
 client_secrets.json
          ``` file can be seen. Entering the "src" folder, one is greeted with two subfolders named "collect" and "preparation". The "collect" folder contains two files named ```
 Collection.py
-         ``` and  ```
-Upload.py
-         ```.  ```
+         ``` .  ```
 Collection.py
-         ``` contains the webscraper used to scrape the Twitter data and writes the collected data to the "data" folder. ```
-Upload.py
-         ``` contains the code which allows the scraped data to be uploaded to a drive in a CSV file. The "preparation" folder contains 2 files:  ```
-download.py
-         ```  and ```
+         ``` contains the webscraper used to scrape the Twitter data and writes the collected data to the "data" folder. The "preparation" folder contains: ```
 clean.R
-         ```. The file ```
-download.py
-         ``` contains a code which retrieves data from the drive, and saves it into the "data" folder. The ```
+         ```. The ```
 clean.R
          ``` code contains the cleaning script, which cleans up the data retrieved by ```
-download.py
+data/dataset1/DataCollection_Twitter.csv 
          ``` . The "analysis" folder contains 1 file: ```
-Sentiment.py
+sentiment_analysis.py
          ``` which allows the cleaned data to be analyzed for sentiment within the tweets and the levels of polarity.
 
 ## Running instructions
 
-Collect | Save to the cloud | Download from the cloud | Clean | Analysis 
------------- | ------------- |------------ | ------------- |------------- 
-collection.py | upload.py | download.py | clean.R | Sentiment.py
-Python & Selenium | Python & Google Drive | Rstudio & Google Drive | Rstudio | Python
+Collect | Save dataset |  Clean | Analysis 
+------------ | ------------- | ------------- |------------- 
+collection.py | upload.py | clean.R | Sentiment.py
+Python & Selenium | Rstudio | Rstudio | Python
 
 To start off, the webscraper (```
 Collection.py
-         ```) will need to be run. For this to work, the chromedriver for Selenium will need to be [installed](https://chromedriver.chromium.org/downloads). Other than that, no further input is required and the webscraper should be able to run if the chromedriver is installed correctly. Then, ```
-Upload.py
-         ``` will need to be run. The code will need to be edited in order to upload the data to one's personal drive. Then, using the ```
-download.py
-         ```  file, the data can be extracted from the drive (do not forget to edit the code so that it extracts the data from the personal drive given in the ```
-Upload.py
-         ``` file). Then, one can run ```
+         ```) will need to be run. For this to work, the chromedriver for Selenium will need to be [installed](https://chromedriver.chromium.org/downloads). Other than that, no further input is required and the webscraper should be able to run if the chromedriver is installed correctly. The dataset is uploaded the data to one's github. Then, the data can be extracted from the github ```
+data/dataset1/DataCollection_Twitter.csv 
+         ``` . Then, one can run ```
 clean.R
          ``` in order to run the cleaning script, which will automatically work (for info on what packages to install, please see the header "Dependencies for cleaning data & sentiment analyis" below). A clean dataset is then downloaded, and any analysis can be done on it. If sentiment analysis is also done, make sure to import the correct file when starting the analysis. The sentiment analysis can be ran using ```
-Sentiment.py
+sentiment_analysis.py
          ``` file.
 
 ## More resources
@@ -184,7 +177,4 @@ csv
          ```, ```
 matplotlib.dates
          ```.
-
-**Gnu make?
-Makefiles**
 
