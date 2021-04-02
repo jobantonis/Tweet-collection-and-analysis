@@ -84,27 +84,27 @@ Overview of the of the directory structure and files:
 
 
 When entering the main branch of the Github repository, several files and folders can immediately be seen. There are two folders, named
-"data" & "src". Next to this, a ```javascript
+"data" & "src". Next to this, a ```
 .gitignore
-         ```, a ```javascript
+         ```, a ```
 README.md
-         ``` (which contains all text seen above and below) and a ```javascript
+         ``` (which contains all text seen above and below) and a ```
 client_secrets.json
-         ``` file can be seen. Entering the "src" folder, one is greeted with two subfolders named "collect" and "preparation". The "collect" folder contains two files named ```javascript
+         ``` file can be seen. Entering the "src" folder, one is greeted with two subfolders named "collect" and "preparation". The "collect" folder contains two files named ```
 Collection.py
-         ``` and  ```javascript
+         ``` and  ```
 Upload.py
-         ```.  ```javascript
+         ```.  ```
 Collection.py
-         ``` contains the webscraper used to scrape the Twitter data and writes the collected data to the "data" folder. ```javascript
+         ``` contains the webscraper used to scrape the Twitter data and writes the collected data to the "data" folder. ```
 Upload.py
-         ``` contains the code which allows the scraped data to be uploaded to a drive in a CSV file. The "preparation" folder contains 2 files: "download.py" and "clean.R". The file ```javascript
+         ``` contains the code which allows the scraped data to be uploaded to a drive in a CSV file. The "preparation" folder contains 2 files: "download.py" and "clean.R". The file ```
 download.py
-         ``` contains a code which retrieves data from the drive, and saves it into the "data" folder. The ```javascript
+         ``` contains a code which retrieves data from the drive, and saves it into the "data" folder. The ```
 clean.R
-         ``` code contains the cleaning script, which cleans up the data retrieved by ```javascript
+         ``` code contains the cleaning script, which cleans up the data retrieved by ```
 download.py
-         ``` . The "analysis" folder contains 1 file: ```javascript
+         ``` . The "analysis" folder contains 1 file: ```
 Sentiment.py
          ``` which allows the cleaned data to be analyzed for sentiment within the tweets and the levels of polarity.
 
