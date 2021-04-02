@@ -1,7 +1,6 @@
 # Rutte's influence on taking a shot
 
 __What effect do the Dutch government's press conferences have on the attitude of their citizens towards the covid-vaccin?__
-[![Total Downloads](https://poser.pugx.org/phpunit/phpunit/downloads)](//packagist.org/packages/phpunit/phpunit)
 
 ## Motivation
 > “Social media are implicated in many of contemporary society's most pressing issues, from influencing public opinion, to organizing social movements, to identifying economic trends.”
@@ -23,7 +22,13 @@ Step 1 consists of the data collection. In this research data will be collected 
 
 #### Step 2 - Data Preparation
 
-Step 2 consists of data preperation and cleaning. A script has been provided that cleans the csv files extracted from the scraper. After the cleaner has been utilised, data will be ready for analysis.
+Step 2 consists of data preperation and cleaning. A script has been provided that cleans the csv files extracted from the scraper. After the cleaner has been utilised, data will be ready for analysis. 
+The script cleaned/labeled the data by:
+- Removing NA and non-numerical depictions of numbers (1.9k to 1900)
+- Removing all white space and non-valuable text elements
+- Removing Extended, Commercial /trade symbols, and mathematical ASCII symbols
+- Adjusting timestamp
+- Encoding usernames using numerical values
 
 #### Step 3 - Sentiment detection <- looked at polarity, text below needs to be changed
 
@@ -81,8 +86,9 @@ Selenium | Google Drive | Google Drive | RStudio | RStudio
 To start off, the webscraper (collect.py) will need to be run. For this to work, the chromedriver for Selenium will need to be [installed](https://chromedriver.chromium.org/downloads). Other than that, no further input is required and the webscraper should be able to run if the chromedriver is installed correctly. Then, upload.py will need to be run. The code will need to be edited in order to upload the data to one's personal drive. Then, using the download.py file, the data can be extracted from the drive (do not forget to edit the code so that it extracts the data from the personal drive given in the upload.py file). Then, one can run clean.R in order to run the cleaning script, which will automatically work (for info on what packages to install, please see the header "Dependencies for cleaning data & sentiment analyis" below). A clean dataset is then downloaded, and any analysis can be done on it. If sentiment analysis is also done, make sure to import the correct file when starting the analysis.
 
 ## More resources
+Academic background information about the dataset creation: The dataset contains keywords indicated by the research of Ramírez-Sáyago (2020) to find relevant tweets about the COVID-19 virus. However the COVID-vaccine is the main focus in this dataset, therefore the keywords of Ramírez-Sáyago (2020) are combined with "vaccin(e)" behind it. However the keywords "coronavirus" and "corona" were not used in this research. The research of Kruspe et al., (2020) did use these keywords to their sentiment analysis, therefore these keywords were also added combined with the keyword "vaccine" in the composition of the dataset.
 
-The research of Ramírez-Sáyago (2020) inidicated keywords to use in finding relevant tweets about the COVID-19 virus. However in this study the COVID-vaccine will be the main focus, hence indicating that the keywords are the keywords of Ramírez-Sáyago (2020) with "vaccin(e)" behind it. However the keywords "coronavirus" and "corona" were not used in this research. The research of Kruspe et al., (2020) add these keywords to their sentiment analysis, therefore these keywords were added combined with the keyword "vaccine".
+Some part of the Dutch population is protesting and thinks corona is one big hoax, this sentiment analysis does not touch upon it's relationship between the believes of Twitter uses in this hoax or not. The latter is described in [this](https://www.nytimes.com/2020/10/29/world/europe/covid-19-netherlands.html) actricle in the New York times.
 
 ## About
 
