@@ -75,7 +75,7 @@ The research of Ramírez-Sáyago (2020) inidicated keywords to use in finding re
 
 ## About
 
-This study was conducted as part of the course, Online Data Collections (oDCM) from Tilburg University. The cleaned data by the scraper built will then be used for the course, Data Prep and Workflow Management (dPrep) from Tilburg University. All team members of team 1 were involved in the process of building, developing, optimizing, cleaning and finally documenting and analyzing the data. Team members: Anouk van Gestel, Job Antonis, Marc Lefebvre, Raul Kleinherenbrink and Lieke Adams.
+This study was conducted as part of the course, [Online Data Collections (oDCM)](https://odcm.hannesdatta.com/) from Tilburg University. The cleaned data by the scraper built will then be used for the course, [Data Prep and Workflow Management (dPrep)](https://dprep.hannesdatta.com/) from Tilburg University. All team members of team 1 were involved in the process of building, developing, optimizing, cleaning and finally documenting and analyzing the data. Team members: Anouk van Gestel, Job Antonis, Marc Lefebvre, Raul Kleinherenbrink and Lieke Adams.
 
 ## Dependencies for scraper
 
