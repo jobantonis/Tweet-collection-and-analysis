@@ -35,6 +35,34 @@ After sentiment classification, the goal of step 5 is to structure the data in a
 
 ## Repository overview **Needs more updating, need to fix repository structure once everything is finished**
 
+Overview of the structure and files:
+
+├── README.md
+├── makefile
+├── client_secrets.json
+├── .gitignore
+├── data
+│    └── dataset1
+│        └─── DataCollection_Twitter
+├── gen
+│   ├── analysis
+│   │      └─ sentiment_analysis.ipynb
+│   └─── data-preparation
+│          └─ output
+│               ├── .gitattributes
+│               └── tweet_data_cleaned
+└── src
+    ├── collect
+    │         ├── client_secret_needed
+    │         ├── Collect.py
+    │         ├── Upload.py    
+    │         └── .DS_Store
+    ├── preparation
+    │         ├── clean.R
+    │         ├── clean
+    │         └── download.R
+    └── .DS_Store
+
 When entering the main branch of the Github repository, several files and folders can immediately be seen. There are two folders, named "data" & "src". Next to this, a .gitignore file, a README.md file (which contains all text seen above and below) and a "client_secrets.json" file can be seen. Entering the "src" folder, one is greeted with two subfolders named "collect" and "preparation". The "collect" folder contains two files named "Collection.py" and "Upload.py". "Collection.py" contains the webscraper used to scrape the Twitter data and writes the collected data to the "data" folder. "Upload.py" contains the code which allows the scraped data to be uploaded to a drive in a CSV file. The "preparation" folder contains 2 files: "download.py" and "clean.R". The file "download.py" contains a code which retrieves data from the drive, and saves it into the "data" folder. The "clean.R" code contains the cleaning script, which cleans up the data retrieved by "download.py". **ADD SENTIMENT ANALYSIS THING HERE**
 
 ## Running instructions
@@ -53,7 +81,7 @@ This study was conducted as part of the course, Online Data Collections (oDCM) f
 
 Python
 Py packages: import "getpass", "time", "selenium.webdriver.common.keys", "selenium.webdriver.chrome",
-https://chromedriver.chromium.org/downloads <- download the Selenium Chrome webdriver using this link. Make sure to select the correct version for Chrome.
+Use this [link](https://chromedriver.chromium.org/downloads) to download the Selenium Chrome webdriver. Make sure to select the correct version for Chrome.
 
 ## Dependencies for cleaning data & sentiment analysis
 
