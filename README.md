@@ -115,8 +115,8 @@ sentiment_analysis.py
 
 Collect | Save dataset |  Clean | Analysis 
 ------------ | ------------- | ------------- |------------- 
-collection.py | upload.py | clean.R | Sentiment.py
-Python & Selenium | Rstudio | Rstudio | Python
+collection.py | collection.py | clean.R | Sentiment.py
+Python & Selenium | Python | Rstudio | Python
 
 To start off, the webscraper (```
 Collection.py
