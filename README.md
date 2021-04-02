@@ -72,9 +72,9 @@ Overview of the of the directory structure and files:
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── sentiment_analysis_visualizations.ipynb                  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─── data-preparation                            
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ output                                   
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .gitattributes
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .gitattributes                           
 ├── prerequistites                                                                                                        
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─── custom_urls.py
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─── custom_urls.py                                                           
 ├── src                                              
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── collect                                      
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── client_secret_needed                    
