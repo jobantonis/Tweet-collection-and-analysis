@@ -70,18 +70,20 @@ Overview of the of the directory structure and files:
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ output                                   
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── .gitattributes                      
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── tweet_data_cleaned                   
-└── src                                              
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── collect                                      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── client_secret_needed                    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Collect.py                             
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Upload.py                             
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .DS_Store                                  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── preparation                                  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── clean.R                                   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── clean                                  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── download.R                              
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .DS_Store                                    
-
+├── src                                              
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── collect                                      
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── client_secret_needed                    
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Collect.py                             
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Upload.py                             
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .DS_Store                                  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── preparation                                  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── clean.R                                   
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── clean                                  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── download.R                              
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .DS_Store                                    
+└── images
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Image_Number_Tweets_Keywords.PNG
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── Image_Vaccine_Sentiment_Status.PNG  
 
 When entering the main branch of the Github repository, several files and folders can immediately be seen. There are two folders, named
 "data" & "src". Next to this, a ```
