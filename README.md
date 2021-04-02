@@ -1,7 +1,7 @@
 # Rutte's influence on taking a shot
 
 __What effect do the Dutch government's press conferences have on the attitude of their citizens towards the covid-vaccin?__
-[![Build Status](https://travis-ci.org/buonzz/laravel-4-freegeoip.svg?branch=master)](https://travis-ci.org/buonzz/laravel-4-freegeoip)
+[![Total Downloads](https://poser.pugx.org/phpunit/phpunit/downloads)](//packagist.org/packages/phpunit/phpunit)
 
 ## Motivation
 > “Social media are implicated in many of contemporary society's most pressing issues, from influencing public opinion, to organizing social movements, to identifying economic trends.”
