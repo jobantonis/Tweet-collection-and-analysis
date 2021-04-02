@@ -4,7 +4,6 @@ __What effect do the Dutch government's press conferences have on the attitude o
 
 ## Motivation
 > “Social media are implicated in many of contemporary society's most pressing issues, from influencing public opinion, to organizing social movements, to identifying economic trends.”
->
 > (p. 1, Hemphill Hedstrom & Leonard, 2021).
 
 Since March 2020, the Netherlands has been dealing with the coronacrisis. During the coronacrisis the Dutch prime minister, Mark Rutte, and the deputy prime minister, Hugo de Jonge, communicated by means of press conferences to inform the public on the (updated) regulations. As the coronacrisis took the world by storm not a lot of information was available concerning the semantics of the virus and its implications. This caused a number of problems for the Dutch government. 
@@ -53,32 +52,32 @@ The outcome of the sentiment analysis is devided into three different plots that
 ## Repository overview **Needs more updating, need to fix repository structure once everything is finished**
 
 Overview of the of the directory structure and files:
->
-├── README.md
-├── makefile
-├── client_secrets.json
-├── .gitignore
-├── data
-│   └── dataset1
-│       └─── DataCollection_Twitter
-├── gen
-│   ├── analysis
-│   │      └─ sentiment_analysis.ipynb
-│   └─── data-preparation
-│        └─ output
-│           ├── .gitattributes
-│           └── tweet_data_cleaned
-└── src
-    ├── collect
-    │   ├── client_secret_needed
-    │   ├── Collect.py
-    │   ├── Upload.py
-    │   └── .DS_Store
-    ├── preparation
-    │   ├── clean.R
-    │   ├── clean
-    │   └── download.R
-    └── .DS_Store
+
+├── README.md                                         
+├── makefile                                         
+├── client_secrets.json                              
+├── .gitignore                                       
+├── data                                             
+│   └── dataset1                                     
+│       └─── DataCollection_Twitter                  
+├── gen                                              
+│   ├── analysis                                     
+│   │      └─ sentiment_analysis.ipynb                
+│   └─── data-preparation                            
+│        └─ output                                   
+│           ├── .gitattributes                      
+│           └── tweet_data_cleaned                   
+└── src                                              
+    ├── collect                                      
+    │   ├── client_secret_needed                    
+    │   ├── Collect.py                             
+    │   ├── Upload.py                             
+    │   └── .DS_Store                                  
+    ├── preparation                                  
+    │   ├── clean.R                                   
+    │   ├── clean                                  
+    │   └── download.R                              
+    └── .DS_Store                                    
 
 
 When entering the main branch of the Github repository, several files and folders can immediately be seen. There are two folders, named "data" & "src". Next to this, a .gitignore file, a README.md file (which contains all text seen above and below) and a "client_secrets.json" file can be seen. Entering the "src" folder, one is greeted with two subfolders named "collect" and "preparation". The "collect" folder contains two files named "Collection.py" and "Upload.py". "Collection.py" contains the webscraper used to scrape the Twitter data and writes the collected data to the "data" folder. "Upload.py" contains the code which allows the scraped data to be uploaded to a drive in a CSV file. The "preparation" folder contains 2 files: "download.py" and "clean.R". The file "download.py" contains a code which retrieves data from the drive, and saves it into the "data" folder. The "clean.R" code contains the cleaning script, which cleans up the data retrieved by "download.py". **ADD SENTIMENT ANALYSIS THING HERE**
