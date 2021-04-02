@@ -82,8 +82,8 @@ Overview of the of the directory structure and files:
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── download.R                              
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── .DS_Store                                    
 └── images                                                                 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Image_Number_Tweets_Keywords.PNG                                              
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── Image_Vaccine_Sentiment_Status.PNG                                               
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Image_Number_Tweets_Keywords.PNG
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── Image_Vaccine_Sentiment_Status.PNG                                               
 
 When entering the main branch of the Github repository, several files and folders can immediately be seen. There are two folders, named
 "data" & "src". Next to this, a ```
