@@ -34,7 +34,7 @@ The script cleaned/labeled the data by:
 
 In the end, the data cleaning and normalization process leaves us with 67.6 % of original data of total tweets.
 
-#### Step 3 - Sentiment detection <- looked at polarity, text below needs to be changed
+#### Step 3 - Sentiment detection
 
 In the third step, each tweet's text field is examined for subjectivity. Tweet text with subjective expressions are retained and objective expressions are discarded. 
 
@@ -52,7 +52,7 @@ We discover the sentiment of the tweets correlating negatively with an press con
 
 **Second, summarize your results concisely. Make use of subheaders where appropriate.**
 
-## Repository overview **Needs more updating, need to fix repository structure once everything is finished**
+## Repository overview
 
 Overview of the of the directory structure and files:
 
@@ -117,7 +117,7 @@ Sentiment.py
 Collect | Save to the cloud | Download from the cloud | Clean | Analysis 
 ------------ | ------------- |------------ | ------------- |------------- 
 collection.py | upload.py | download.py | clean.R | Sentiment.py
-Selenium | Google Drive | Google Drive | RStudio | RStudio
+Python & Selenium | Python & Google Drive | Rstudio & Google Drive | Rstudio | Python
 
 To start off, the webscraper (```
 Collection.py
@@ -159,13 +159,27 @@ Use this [link](https://chromedriver.chromium.org/downloads) to download the Sel
 ## Dependencies for cleaning data & sentiment analysis
 
 R
-R packages: install.packages(```
+R packages: install.packages```
 stringr
-         ```), (```
+         ```, ```
 tidyverse
-         ```), (```
+         ```, ```
 data.table
-         ```)
+         ```.
+Python
+Py packages: import ```
+matplotlib.pyplot
+         ```, ```
+pandas
+         ```, ```
+numpy
+         ```, ```
+datetime
+         ``` , ```
+csv
+         ```, ```
+matplotlib.dates
+         ```.
 
 **Gnu make?
 Makefiles**
