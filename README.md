@@ -116,7 +116,7 @@ Sentiment.py
 
 Collect | Save to the cloud | Download from the cloud | Clean | Analysis 
 ------------ | ------------- |------------ | ------------- |------------- 
-collect.py | upload.py | download.py | clean.R | Sentiment.py
+collection.py | upload.py | download.py | clean.R | Sentiment.py
 Selenium | Google Drive | Google Drive | RStudio | RStudio
 
 To start off, the webscraper (```
@@ -145,13 +145,27 @@ This study was conducted as part of the course, [Online Data Collections (oDCM)]
 ## Dependencies for scraper
 
 Python
-Py packages: import "getpass", "time", "selenium.webdriver.common.keys", "selenium.webdriver.chrome",
+Py packages: import ```
+getpass
+         ```, ```
+time
+         ```, ```
+selenium.webdriver.common.keys
+         ```, ```
+selenium.webdriver.chrome
+         ```,
 Use this [link](https://chromedriver.chromium.org/downloads) to download the Selenium Chrome webdriver. Make sure to select the correct version for Chrome.
 
 ## Dependencies for cleaning data & sentiment analysis
 
 R
-R packages: install.packages("stringr"), ("tidyverse"), ("data.table")
+R packages: install.packages(```
+stringr
+         ```), (```
+tidyverse
+         ```), (```
+data.table
+         ```)
 
 **Gnu make?
 Makefiles**
