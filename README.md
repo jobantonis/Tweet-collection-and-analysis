@@ -119,7 +119,19 @@ Collect | Save to the cloud | Download from the cloud | Clean | Analysis
 collect.py | upload.py | download.py | clean.R | Sentiment.py
 Selenium | Google Drive | Google Drive | RStudio | RStudio
 
-To start off, the webscraper (collect.py) will need to be run. For this to work, the chromedriver for Selenium will need to be [installed](https://chromedriver.chromium.org/downloads). Other than that, no further input is required and the webscraper should be able to run if the chromedriver is installed correctly. Then, upload.py will need to be run. The code will need to be edited in order to upload the data to one's personal drive. Then, using the download.py file, the data can be extracted from the drive (do not forget to edit the code so that it extracts the data from the personal drive given in the upload.py file). Then, one can run clean.R in order to run the cleaning script, which will automatically work (for info on what packages to install, please see the header "Dependencies for cleaning data & sentiment analyis" below). A clean dataset is then downloaded, and any analysis can be done on it. If sentiment analysis is also done, make sure to import the correct file when starting the analysis.
+To start off, the webscraper (```
+Collection.py
+         ```) will need to be run. For this to work, the chromedriver for Selenium will need to be [installed](https://chromedriver.chromium.org/downloads). Other than that, no further input is required and the webscraper should be able to run if the chromedriver is installed correctly. Then, ```
+Upload.py
+         ``` will need to be run. The code will need to be edited in order to upload the data to one's personal drive. Then, using the ```
+download.py
+         ```  file, the data can be extracted from the drive (do not forget to edit the code so that it extracts the data from the personal drive given in the ```
+Upload.py
+         ``` file). Then, one can run ```
+clean.R
+         ``` in order to run the cleaning script, which will automatically work (for info on what packages to install, please see the header "Dependencies for cleaning data & sentiment analyis" below). A clean dataset is then downloaded, and any analysis can be done on it. If sentiment analysis is also done, make sure to import the correct file when starting the analysis. The sentiment analysis can be ran using ```
+Sentiment.py
+         ``` file.
 
 ## More resources
 Academic background information about the dataset creation: The dataset contains keywords indicated by the research of Ramírez-Sáyago (2020) to find relevant tweets about the COVID-19 virus. However the COVID-vaccine is the main focus in this dataset, therefore the keywords of Ramírez-Sáyago (2020) are combined with "vaccin(e)" behind it. However the keywords "coronavirus" and "corona" were not used in this research. The research of Kruspe et al., (2020) did use these keywords to their sentiment analysis, therefore these keywords were also added combined with the keyword "vaccine" in the composition of the dataset.
