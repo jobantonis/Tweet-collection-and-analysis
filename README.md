@@ -59,7 +59,7 @@ Overview of the of the directory structure and files:
 ├── README.md                                                                                                      
 ├── App                                                                                                       
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── output                                                               
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─── RUN RMD FILE TO RENDER APP.txt                 
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├─── RUN RMD FILE TO RENDER APP.txt                 
 │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─── Polarity_over_time_app.Rmd                                   
 ├── makefile                                                                      
 ├──.gitignore                                       
