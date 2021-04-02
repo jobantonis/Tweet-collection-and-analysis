@@ -3,14 +3,11 @@
 __What effect do the Dutch government's press conferences have on the attitude of their citizens towards the covid-vaccin?__
 
 ## Motivation
-> “Social media are implicated in many of contemporary society's most pressing issues, from influencing public opinion, to organizing social movements, to identifying economic trends.”
-> (p. 1, Hemphill Hedstrom & Leonard, 2021).
+> “Social media are implicated in many of contemporary society's most pressing issues, from influencing public opinion, to organizing social movements, to identifying economic trends.”     (p. 1, Hemphill Hedstrom & Leonard, 2021).
 
 Since March 2020, the Netherlands has been dealing with the coronacrisis. During the coronacrisis the Dutch prime minister, Mark Rutte, and the deputy prime minister, Hugo de Jonge, communicated by means of press conferences to inform the public on the (updated) regulations. As the coronacrisis took the world by storm not a lot of information was available concerning the semantics of the virus and its implications. This caused a number of problems for the Dutch government. 
-
-Firstly, regulations were set based on data provided by the rivm which was not always up to date. There have been instances where data was lagging behind and regulations (e.g. closing businesses and implementing a curfew) were based on this data. Secondly, there was a so called 'arms-race' set in by big pharma to develop a vaccin as soon as possible. Due to the quick development of the covid-vaccines, clinical trials were kept to a bare minimum. These reasons led the Dutch public to skepticism and distrust towards the government, their regulations and the vaccins developed by big pharma. In the Netherlands, it is clear that opinions about Corona, the regulations and the vaccine are divided. Part of the population is protesting and thinks corona is one big hoax, and part of the population 'believes' in the Corona virus being a true pandemic (Erdbrink, 2021). These different opinions lead to different sentiments towards vaccines as well. The social network Twitter is a medium where users can voice their opinions via the use of tweets.
-
-This research sets out to analyse the sentiment of the Dutch public towards a covid vaccin. It is important to know where the general public stands in order to measure the effectiveness of government communication, and to develop a fitting strategy to communicate the distribution and administering of a vaccin. In this research tweets will be scraped based on a set timeframe surrounding each press conference and predetermined covid related keywords. Tweets are preprocessed before computing sentiment scores. Hash symbol (#), mention symbol (@), URLs, extra spaces, and paragraph breaks are cleaned. Punctuations and numbers are included. Advance-level preprocessing, such as (i) correction of incorrectly spelled spelt words, (ii) conversion of abbreviations to their original forms, are bypassed to avoid analysis bottleneck.
+&nbsp;&nbspFirstly, regulations were set based on data provided by the rivm which was not always up to date. There have been instances where data was lagging behind and regulations (e.g. closing businesses and implementing a curfew) were based on this data. Secondly, there was a so called 'arms-race' set in by big pharma to develop a vaccin as soon as possible. Due to the quick development of the covid-vaccines, clinical trials were kept to a bare minimum. These reasons led the Dutch public to skepticism and distrust towards the government, their regulations and the vaccins developed by big pharma. In the Netherlands, it is clear that opinions about Corona, the regulations and the vaccine are divided. Part of the population is protesting and thinks corona is one big hoax, and part of the population 'believes' in the Corona virus being a true pandemic (Erdbrink, 2021). These different opinions lead to different sentiments towards vaccines as well. The social network Twitter is a medium where users can voice their opinions via the use of tweets.
+&nbsp;&nbspThis research sets out to analyse the sentiment of the Dutch public towards a covid vaccin. It is important to know where the general public stands in order to measure the effectiveness of government communication, and to develop a fitting strategy to communicate the distribution and administering of a vaccin. In this research tweets will be scraped based on a set timeframe surrounding each press conference and predetermined covid related keywords. Tweets are preprocessed before computing sentiment scores. Hash symbol (#), mention symbol (@), URLs, extra spaces, and paragraph breaks are cleaned. Punctuations and numbers are included. Advance-level preprocessing, such as (i) correction of incorrectly spelled spelt words, (ii) conversion of abbreviations to their original forms, are bypassed to avoid analysis bottleneck.
 
 ## Method and results
 
@@ -18,13 +15,13 @@ Our method consists of 5 steps to analyze sentiment data.
 
 #### Step 1 - Data collection
 
-Step 1 consists of the data collection. In this research data will be collected from Twitter using a bespoke scraper, which will be utilised on different timeframes and targeted on tweets with covid related keywords. The data will consequently be saved as a csv file.
+The first step consists of the data collection. In this research data will be collected from Twitter using a bespoke scraper, which will be utilised on different timeframes and targeted on tweets with covid related keywords. The data will consequently be saved as a csv file.
 The script preprocessed the data by:
 
 
 #### Step 2 - Data Preparation
 
-Step 2 consists of data preperation and cleaning. A script has been provided that cleans the csv files extracted from the scraper. After the cleaner has been utilised, data will be ready for analysis.
+The second step consists of data preperation and cleaning. A script has been provided that cleans the csv files extracted from the scraper. After the cleaner has been utilised, data will be ready for analysis.
 The script cleaned/labeled the data by:
 - Removing NA and non-numerical depictions of numbers (1.9k to 1900)
 - Removing all white space and non-valuable text elements
@@ -32,20 +29,23 @@ The script cleaned/labeled the data by:
 - Remove duplicate tweets (literal same content)
 - Adjusting timestamp
 - Encoding usernames using numerical values
+In the end, the data cleaning and normalization process leaves us with 67.6 % of original data of total tweets.
 
 #### Step 3 - Sentiment detection <- looked at polarity, text below needs to be changed
 
-During step 3, each tweet's text field is examined for subjectivity. Tweet text with subjective expressions are retained and objective expressions are discarded.
+In the third step, each tweet's text field is examined for subjectivity. Tweet text with subjective expressions are retained and objective expressions are discarded. 
 
-#### Step 4 - Sentiment classification <- same issue as above: polarity already shows positive/negative
+#### Step 4 - Sentiment classification
 
-During step 4 each subjective string detected is classified into groups: positive, negative and neutral.
+The fourth step classifies each subjective string into groups: positive, negative and neutral based upon their polarity scores. The existing sentiment lexicon used was useful in conjunction with the textual context of the tweets.
 
 #### Step 5 - Presentation of output
 
-After sentiment classification, the goal of step 5 is to structure the data in a visual and informative manner. The text results are displayed in an array of different graphs.
+After sentiment classification, the goal of fifth step is to structure the data in a visual and informative manner. The text results are displayed in an array of different graphs.
 
-The outcome of the sentiment analysis is devided into three different plots that indicate the overall fluctuations in positive, negative and neutral tweet sentiments during the press conference.
+The outcome of the sentiment analysis is devided into three different plots that indicate the overall fluctuations in positive, negative and neutral tweet sentiments during the press conference. The amount of tweets increased drastically around **15 december 2020** [press conference](https://www.rijksoverheid.nl/actueel/nieuws/2020/12/14/lockdown-om-contacten-tot-een-minimum-te-beperken), we assume that this has to do with a installment of lock-down in the Netherlands during that press conference. Our experiments on twitter sentiment analysis show that there were more positive tweets about the corona-vaccin in total compared to negative and neutral. Like any other method, our proposed method also faces the constraints of real opinions compared to the social media opinions scenario.
+
+We discover the sentiment of the tweets correlating negatively with an press conference and observe a change in sentiment toward the coronavaccin from **negative to positive** longer into the pandemic. Unfortunately, the pandemic is still far from over and the dynamics of this analysis may very well change in the future.
 
 **Second, summarize your results concisely. Make use of subheaders where appropriate.**
 
