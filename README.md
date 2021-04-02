@@ -98,7 +98,11 @@ Upload.py
 Collection.py
          ``` contains the webscraper used to scrape the Twitter data and writes the collected data to the "data" folder. ```
 Upload.py
-         ``` contains the code which allows the scraped data to be uploaded to a drive in a CSV file. The "preparation" folder contains 2 files: "download.py" and "clean.R". The file ```
+         ``` contains the code which allows the scraped data to be uploaded to a drive in a CSV file. The "preparation" folder contains 2 files:  ```
+download.py
+         ```  and ```
+clean.R
+         ```. The file ```
 download.py
          ``` contains a code which retrieves data from the drive, and saves it into the "data" folder. The ```
 clean.R
