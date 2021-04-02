@@ -1,0 +1,65 @@
+---
+title: "Test"
+author: "Job"
+date: "4/1/2021"
+output: html_document
+runtime: shiny
+
+---
+```{r, echo=FALSE}
+library(shiny)
+library(plotly)
+library(DT)
+tweets <- read.csv("../../gen/analysis/output/sentiment_tweets.csv") 
+tweets$Timestamp <- as.Date(tweets$Timestamp)
+polarity_mean <- aggregate(Polarity ~ Timestamp, tweets, mean) 
+
+ui <- fluidPage(
+  sidebarLayout(
+    sidebarPanel(
+      h2("Dutch consumer sentiment towards a COVID-19 vaccin"),
+      dateRangeInput(inputId = "date", "Date range",
+                     start = min(polarity_mean$Timestamp),
+                     end   = max(polarity_mean$Timestamp)),
+      downloadButton(outputId = "download_data", label = "Download"),
+    ),
+    mainPanel(
+      plotlyOutput(outputId = "plot"), br(),
+      em("Higher polarity values indicate positivity in the tweet about a coronavaccin, negative values indicate negativity"),
+      br(), br(), br(),
+      DT::dataTableOutput(outputId = "table")
+    )
+  )
+)
+
+server <- function(input, output) {
+  filtered_data <- reactive({
+    subset(polarity_mean, Polarity &
+           Timestamp >= input$date[1] & Timestamp <= input$date[2])})
+  
+  output$plot <- renderPlotly({
+    ggplotly({
+      p <- ggplot(filtered_data(), aes_string(x= "Timestamp", y="Polarity")) +
+        geom_point(alpha=0.5) + theme(legend.position = "none") +
+        ylab("Tweet polarity")
+      
+      p
+    })
+  })
+  
+  output$table <- DT::renderDataTable({
+    filtered_data()
+  })
+  
+  output$download_data <- downloadHandler(
+    filename = "download_data.csv",
+    content = function(file) {
+      data <- filtered_data()
+      write.csv(data, file, row.names = FALSE)
+    }
+  )
+  
+}
+
+shinyApp(ui = ui, server = server)
+```
