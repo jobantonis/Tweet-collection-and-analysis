@@ -47,10 +47,10 @@ The fourth step classifies each subjective string into groups: positive, negativ
 After sentiment classification, the goal of fifth step is to structure the data in a visual and informative manner. The text results are displayed in an array of different graphs.
 
 The outcome of the sentiment analysis is devided into three different plots that indicate the overall fluctuations in positive, negative and neutral tweet sentiments during the press conference. The amount of tweets increased drastically around 19 november 2020. During this time the Dutch government [announced](https://www.rijksoverheid.nl/binaries/rijksoverheid/documenten/kamerstukken/2020/11/16/kamerbrief-over-aankoop-covid-19-vaccins/kamerbrief-over-aankoop-covid-19-vaccins.pdf) during that time, that they were going to buy the corona-vaccins for the Dutch citizens. In addition to that, in hindsight this was all leading up to the [press conference](https://www.rijksoverheid.nl/actueel/nieuws/2020/12/14/lockdown-om-contacten-tot-een-minimum-te-beperken) at 15-12-2020 were eventually a harsh lock-down in the Netherlands would be announced. Our experiments on twitter sentiment analysis show that there were more positive tweets about the corona-vaccin in total compared to negative and neutral. Like any other method, our proposed method also faces the constraints of real opinions compared to the social media opinions scenario.
-![Image of Keywords in Tweets](https://github.com/jobantonis/Tweet-collection-and-analysis/images/Image_Number_Tweets_Keywords.PNG)
+![Image of Keywords in Tweets](https://github.com/jobantonis/Tweet-collection-and-analysis/blob/main/images/Image_Number_Tweets_Keywords.PNG)
 
 We discover the sentiment of the tweets correlating negatively with an press conference and observe a change in sentiment toward the coronavaccin from either negative or positive to neutral longer into the pandemic. Unfortunately, the pandemic is still far from over and the dynamics of this analysis may very well change in the future.
-![Image of Sentimentanalysis](https://github.com/jobantonis/Tweet-collection-and-analysis/images/Image_Vaccine_Sentiment_Status.PNG)
+![Image of Sentimentanalysis](https://github.com/jobantonis/Tweet-collection-and-analysis/blob/main/images/Image_Vaccine_Sentiment_Status.PNG)
 
 ## Repository overview
 
