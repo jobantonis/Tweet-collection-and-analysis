@@ -3,7 +3,8 @@
 __What effect do the Dutch government's press conferences have on the attitude of their citizens towards the covid-vaccin?__
 
 ## Motivation
-> “Social media are implicated in many of contemporary society's most pressing issues, from influencing public opinion, to organizing social movements, to identifying economic trends.”(p. 1, Hemphill Hedstrom & Leonard, 2021).>
+> “Social media are implicated in many of contemporary society's most pressing issues, from influencing public opinion, to organizing social movements, to identifying economic trends.”
+> (p. 1, Hemphill Hedstrom & Leonard, 2021).
 
 Since March 2020, the Netherlands has been dealing with the coronacrisis. During the coronacrisis the Dutch prime minister, Mark Rutte, and the deputy prime minister, Hugo de Jonge, communicated by means of press conferences to inform the public on the (updated) regulations. As the coronacrisis took the world by storm not a lot of information was available concerning the semantics of the virus and its implications. This caused a number of problems for the Dutch government. 
 
@@ -71,8 +72,8 @@ When entering the main branch of the Github repository, several files and folder
 
 ## Running instructions
 
-Collect | Save to the cloud | Download from the cloud | Clean | Analysis
------------- | -------------
+Collect | Save to the cloud | Download from the cloud | Clean | Analysis 
+------------ | ------------- |------------ | ------------- |------------- 
 collect.py | upload.py | download.py | clean.R | Sentiment.Analysis
 Selenium | Google Drive | Google Drive | RStudio | RStudio
 
